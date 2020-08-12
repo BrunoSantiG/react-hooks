@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+
+import Context from "./components/Context/Main";
+import { userData, techData } from "./service/data";
+import CounterReduceSimple from "./components/CounterReduce/Simple";
+import Card from "./components/Card";
+
+import "./App.css";
+import CounterReduceComplex from "./components/CounterReduce/Complex";
+import ReduceAndContext from "./components/ReduceAndContext";
+
+export const UserContext = createContext();
+export const TechContext = createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<div className="Cards">
+				<Card title={"useContext"}>
+					<UserContext.Provider value={userData}>
+						<TechContext.Provider value={techData}>
+							<Context />
+						</TechContext.Provider>
+					</UserContext.Provider>
+				</Card>
+				<Card title={"useReduce(Variable)"}>
+					<CounterReduceSimple />
+				</Card>
+				<Card title={"useReduce(Object)"}>
+					<CounterReduceComplex />
+				</Card>
+
+				<Card title={"useReduce And useContext"}>
+					<ReduceAndContext />
+				</Card>
+			</div>
+		</div>
+	);
 }
 
 export default App;
