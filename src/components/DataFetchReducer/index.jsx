@@ -17,7 +17,7 @@ function DataFetchReducer() {
 			.then((response) => {
 				dispatch({ type: "FETCH_SUCCESS", payload: response.data });
 			})
-			.catch((error) => {
+			.catch(() => {
 				dispatch({ type: "FETCH_ERROR" });
 			});
 	}, []);
