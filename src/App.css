@@ -9,7 +9,10 @@ ul {
 }
 
 .Cards {
+	display: flex;
 	flex-direction: column;
+	width: 100%;
+	min-width: 300px;
 }
 @media (min-width: 1000px) {
 	.Cards {

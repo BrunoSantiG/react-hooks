@@ -8,6 +8,7 @@ import Card from "./components/Card";
 import "./App.css";
 import CounterReduceComplex from "./components/CounterReduce/Complex";
 import ReduceAndContext from "./components/ReduceAndContext";
+import DataFetchReducer from "./components/DataFetchReducer";
 
 export const UserContext = createContext();
 export const TechContext = createContext();
@@ -32,6 +33,10 @@ function App() {
 
 				<Card title={"useReduce And useContext"}>
 					<ReduceAndContext />
+				</Card>
+
+				<Card title={"API Request with useReduce"}>
+					<DataFetchReducer />
 				</Card>
 			</div>
 		</div>
