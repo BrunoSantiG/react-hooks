@@ -16,6 +16,7 @@ function Callback() {
 	const incrementSalary = useCallback(() => {
 		setSalary(salary + 100);
 	}, [salary]);
+
 	return (
 		<div>
 			<Title />
