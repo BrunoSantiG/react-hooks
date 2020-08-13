@@ -9,6 +9,11 @@ ul {
 }
 
 .Cards {
-	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+}
+@media (min-width: 1000px) {
+	.Cards {
+		display: flex;
+		flex-direction: row;
+	}
 }
