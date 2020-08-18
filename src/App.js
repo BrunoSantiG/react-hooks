@@ -11,6 +11,7 @@ import ReduceAndContext from "./components/ReduceAndContext";
 import DataFetchReducer from "./components/DataFetchReducer";
 import Callback from "./components/Callback";
 import Memo from "./components/Memo";
+import Ref from "./components/Ref";
 
 export const UserContext = createContext();
 export const TechContext = createContext();
@@ -47,6 +48,10 @@ function App() {
 
 				<Card title={"useMemo"}>
 					<Memo />
+				</Card>
+
+				<Card title={"useRef"}>
+					<Ref />
 				</Card>
 			</div>
 		</div>
