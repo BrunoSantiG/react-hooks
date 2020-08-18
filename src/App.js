@@ -10,6 +10,7 @@ import CounterReduceComplex from "./components/CounterReduce/Complex";
 import ReduceAndContext from "./components/ReduceAndContext";
 import DataFetchReducer from "./components/DataFetchReducer";
 import Callback from "./components/Callback";
+import Memo from "./components/Memo";
 
 export const UserContext = createContext();
 export const TechContext = createContext();
@@ -42,6 +43,10 @@ function App() {
 
 				<Card title={"useCallback"}>
 					<Callback />
+				</Card>
+
+				<Card title={"useMemo"}>
+					<Memo />
 				</Card>
 			</div>
 		</div>
